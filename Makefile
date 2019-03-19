@@ -14,9 +14,9 @@ $(TARGET): $(OBJECTS)
 clean:
 	rm -rf $(OBJECTS) $(DEPENDS) $(TARGET)
 
-# Use the compiler's -M flag to generate header dependencies.
+# Use the compiler's -MM flag to generate header dependencies.
 %.d: %.cpp
-	$(CXX) $(CXXFLAGS) -M $^ > $@
+	$(CXX) $(CXXFLAGS) -MM $^ > $@
 
 # Include the generated dependencies.
 include $(DEPENDS)

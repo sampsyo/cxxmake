@@ -1,6 +1,8 @@
 #include "bar.h"
 #include "foo.h"
+#include <iostream>
 
 int main() {
-    return foo() + BAR;
+    std::cout << foo() << " " << BAR;
+    return 0;
 }
