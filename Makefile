@@ -5,7 +5,7 @@ OBJECTS := $(SOURCES:%.cpp=%.o)
 DEPENDS := $(SOURCES:%.cpp=%.d)
 
 $(TARGET): $(OBJECTS)
-	$(CXX) $(CXXFLAGS) $^ -o $@
+	$(CXX) $(CXXFLAGS) $(LDFLAGS) $^ -o $@
 
 %.o: %.cpp
 	$(CXX) $(CXXFLAGS) -c $< -o $@
